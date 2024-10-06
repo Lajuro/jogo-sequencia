@@ -1,0 +1,112 @@
+.level-select {
+  text-align: center;
+  padding: 20px;
+  animation: fadeIn 0.5s ease;
+}
+
+.level-select-title {
+  font-size: 2.5em;
+  color: #4b6584;
+  margin-bottom: 20px;
+}
+
+.level-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Botão do nível */
+.level-button {
+  width: 150px;
+  height: 200px;
+  border-radius: 15px;
+  border: 2px solid transparent;
+  background: #ffffff;
+  color: #2c3e50;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s, opacity 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.level-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.level-button.unlocked {
+  background: linear-gradient(135deg, #4a90e2, #007aff);
+  color: white;
+}
+
+.level-button.locked {
+  background: #ffe6e6;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.level-button.completed {
+  background: linear-gradient(135deg, #a9e9c3, #2ecc71);
+  border-color: #27ae60;
+}
+
+.level-number {
+  font-size: 3em;
+  font-weight: bold;
+  color: inherit;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Dificuldade */
+.difficulty-dots {
+  display: flex;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #cccccc;
+  transition: background 0.3s;
+}
+
+.filled {
+  background: #4b6584;
+}
+
+/* Status e ícone de bloqueio */
+.status {
+  font-size: 1em;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+.lock-icon {
+  position: absolute;
+  bottom: 10px;
+  font-size: 1.5em;
+  color: #ff6b6b;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

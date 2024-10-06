@@ -1,0 +1,65 @@
+/* Container das bolas */
+.ball-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 0;
+  flex-wrap: wrap;
+  background-color: #ececec;
+  padding: 20px;
+}
+
+/* Bolas */
+.ball {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease, background-color 0.3s;
+  border: 3px solid transparent;
+  background-color: #4a90e2;
+  outline: none;
+}
+
+.ball:focus {
+  outline: none;
+}
+
+.ball:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.ball.lit {
+  background-color: #2ecc71;
+  border-color: #27ae60;
+  box-shadow: 0 0 20px rgba(39, 174, 96, 0.7);
+}
+
+/* Efeito de brilho ao clicar */
+.ball:active {
+  box-shadow: 0 0 20px rgba(75, 101, 132, 0.5);
+}
+
+/* Animação de erro */
+.flash-error {
+  animation: flash 0.3s;
+}
+
+@keyframes flash {
+  0% {
+    border-color: red;
+  }
+
+  100% {
+    border-color: transparent;
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .ball {
+    width: 45px;
+    height: 45px;
+  }
+}
