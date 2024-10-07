@@ -1,50 +1,86 @@
-# React + TypeScript + Vite
+# Jogo de Sequência
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p style="text-align: center">
+  <img src="./public/logo.png" alt="Logo" style="width: 20%;">
+</p>
 
-Currently, two official plugins are available:
+Este é um jogo interativo de sequência que desafia sua memória e habilidades de reconhecimento de padrões. A aplicação é construída com React e TypeScript, utilizando conceitos modernos de desenvolvimento web.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Funcionalidades
 
-## Expanding the ESLint configuration
+- **Níveis de Dificuldade:** Três níveis de dificuldade disponíveis, cada um com um conjunto específico de padrões a serem seguidos.
+- **Interface Dinâmica:** Cores vibrantes e efeitos visuais que proporcionam uma experiência de jogo envolvente.
+- **Sistema de Pontuação:** Acompanhe o número de cliques e o tempo gasto para completar cada nível.
+- **Feedback Visual:** Efeitos sonoros e visuais ao interagir com os elementos do jogo.
+- **Sistema de Desbloqueio de Níveis:** Os níveis são desbloqueados progressivamente conforme o jogador completa os desafios anteriores.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Tecnologias Utilizadas
 
-- Configure the top-level `parserOptions` property like this:
+- **React:** Para a construção da interface do usuário.
+- **TypeScript:** Para fornecer tipagem estática e melhorar a manutenção do código.
+- **CSS:** Para estilização dos elementos e efeitos visuais.
+- **React Hooks:** Hooks personalizados para gerenciamento de estados, sons e cronômetro.
+- **HTML5 Audio API:** Para feedback sonoro nas interações do jogo.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Como Jogar
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+1. Ao iniciar, você verá uma tela de seleção de níveis. Apenas o primeiro nível estará disponível.
+2. Clique no primeiro nível para começar o jogo.
+3. O objetivo é clicar nas bolas coloridas na sequência correta. Preste atenção nas cores e tente memorizar o padrão.
+4. Se você clicar na sequência correta, o nível será concluído com sucesso, e o próximo nível será desbloqueado.
+5. Complete todos os níveis para experimentar toda a diversão do jogo!
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Como Executar o Projeto
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. Certifique-se de ter o [Node.js](https://nodejs.org/) instalado em sua máquina.
+2. Clone este repositório:
+
+   ```bash
+   git clone https://github.com/Lajuro/jogo-sequencia.git
+   ```
+
+3. Acesse a pasta do projeto:
+
+   ```bash
+   cd jogo-sequencia
+   ```
+
+4. Instale as dependências:
+
+   ```bash
+   npm install
+   ```
+
+5. Execute o projeto:
+
+   ```bash
+   npm run dev
+   ```
+
+6. Abra o navegador e acesse:
+
+   ```plaintext
+   http://localhost:3000
+   ```
+
+## Favicon
+
+Um favicon personalizado foi adicionado ao projeto. Certifique-se de colocar o arquivo `favicon.png` dentro da pasta `public` para que ele apareça corretamente na aba do navegador.
+
+## Personalizando o Jogo
+
+- Você pode modificar as cores, níveis e dificuldade no arquivo `constants.ts` localizado na pasta `src`.
+
+## Próximas Funcionalidades
+
+- Mais níveis e desafios.
+- Melhoria na interface e nos efeitos visuais.
+- Novos modos de jogo e funcionalidades especiais.
+
+## Contribuindo
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests para adicionar novas funcionalidades ou corrigir problemas.
+
+## Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
