@@ -7,17 +7,17 @@ const useSound = () => {
     oscillator.type = 'sine';
     if (type === 'success') {
       oscillator.frequency.setValueAtTime(200 + step * 50, audioContext.currentTime);
-      gainNode.gain.setValueAtTime(0.2, audioContext.currentTime);
+      gainNode.gain.setValueAtTime(100, audioContext.currentTime);
     } else {
       oscillator.frequency.setValueAtTime(100, audioContext.currentTime);
-      gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+      gainNode.gain.setValueAtTime(100, audioContext.currentTime);
     }
 
     oscillator.connect(gainNode);
     gainNode.connect(audioContext.destination);
 
     oscillator.start();
-    oscillator.stop(audioContext.currentTime + 0.2);
+    oscillator.stop(audioContext.currentTime + 0.4);
   };
 
   const playSuccessSound = () => {
@@ -27,13 +27,13 @@ const useSound = () => {
 
     oscillator.type = 'sine';
     oscillator.frequency.setValueAtTime(400, audioContext.currentTime);
-    gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+    gainNode.gain.setValueAtTime(0.4, audioContext.currentTime);
 
     oscillator.connect(gainNode);
     gainNode.connect(audioContext.destination);
 
     oscillator.start();
-    oscillator.stop(audioContext.currentTime + 0.5);
+    oscillator.stop(audioContext.currentTime + 1);
   };
 
   return { playSound, playSuccessSound };

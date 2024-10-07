@@ -60,7 +60,7 @@ Este é um jogo interativo de sequência que desafia sua memória e habilidades 
 6. Abra o navegador e acesse:
 
    ```plaintext
-   http://localhost:3000
+   http://localhost:5173/jogo-sequencia
    ```
 
 ## Favicon
