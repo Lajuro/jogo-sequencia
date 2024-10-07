@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import confetti from 'canvas-confetti';
 import './SecretMessage.css';
+import familiaImg from '../../assets/familia.png';
 
 function SecretMessage() {
   useEffect(() => {
@@ -46,7 +47,7 @@ function SecretMessage() {
         Lajuro e Titta vão ser papais! 💕
       </p>
       <div className="media-container">
-        <img src="/images/familia.png" alt="Surpresa" className="secret-image" />
+        <img src={familiaImg} alt="Surpresa" className="secret-image" />
       </div>
     </div>
   );
